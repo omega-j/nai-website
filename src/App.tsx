@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Header from "./components/Header";
+import AboutMe from "./components/AboutMe";
+import Interests from "./components/Interests";
+import Education from "./components/Education";
+import Fellowships from "./components/Fellowships";
+import Publications from "./components/Publications";
+import ContactForm from "./components/ContactForm";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="bg-black text-white font-sans min-h-screen">
+      <Header />
+      <main className="container mx-auto mt-10 px-6">
+        <AboutMe />
+        <Interests />
+        <Education />
+        <Fellowships />
+        <Publications />
+        <ContactForm />
+      </main>
+    </div>
+  );
+};
 
-export default App
+export default App;
